@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #81898a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 65px 65px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #81898a;
+    box-shadow: 0 0 8px rgba(79,172,254,0.4);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background: #81898a;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.link {
+    text-align: center;
+    margin-top: 18px;
+}
+
+.link a {
+    display: block;
+    text-decoration: none;
+    color: #81898a;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+        align-items: flex-start;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .input-group input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .link a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .input-group input {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+</style>
+</head>
+<script>
+    function login() {
+        window.location.href = "home.html";
+    }
+    </script>
+<body>
+
+<div class="container">
+    <h2>Login</h2>
+
+    <form novalidate>
+        <div class="input-group">
+            <input type="text" placeholder="Masukkan Email">
+        </div>
+    
+        <div class="input-group">
+            <input type="password" placeholder="Masukkan Password">
+        </div>
+    
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <div class="link">
+        <a href="ForgetPassword.html">Lupa Password?</a>
+        <a href="Register.html">Buat Akun</a>
+    </div>
+</div>
+
+</body>
+</html>
